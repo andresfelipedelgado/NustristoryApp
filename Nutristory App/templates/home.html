@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block header%}
+<h1>Nutristory App</h1>
+<a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Inicio</a>
+<a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Salir</a>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+  <h2>Inicio</h2>
+  <p>Bienvenid@, {{ username }}!</p>
+</div>
+{% endblock %}

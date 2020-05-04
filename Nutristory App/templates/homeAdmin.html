@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block header%}
+<h1>Nutristory App</h1>
+<a href="{{ url_for('homeAdmin') }}"><i class="fas fa-home"></i>Inicio</a>
+<a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Salir</a>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+  <h2>Inicio</h2>
+  <p>bienvenido Administrador!, seleccione la acción que desea realizar</p>
+  <div class="login">
+    <h1>Acciones</h1>
+    <form action="{{ url_for('newNut') }}">
+      <input type="submit" value="Agregar Nutricionista">
+    </form>
+  </div>
+</div>
+{% endblock %}
